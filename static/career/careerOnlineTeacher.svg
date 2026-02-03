@@ -1,0 +1,9 @@
+<svg width="1024" height="1024" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .text { fill: white; font-family: "Microsoft YaHei", "SimHei", sans-serif; font-weight: bold; text-anchor: middle; }
+    .title { font-size: 100px; }
+    .subtitle { font-size: 50px; }
+  </style>
+  <text x="50%" y="45%" class="text title">上海公安学院</text>
+  <text x="50%" y="60%" class="text subtitle">2023年 放弃一切荣誉只为做个警察</text>
+</svg>
