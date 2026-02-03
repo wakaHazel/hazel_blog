@@ -1,151 +1,65 @@
-# Folio 2025
+# Hazel's Portfolio
 
-![image info](./static/social/share-image.png)
+Welcome to my 3D interactive portfolio! This project showcases my work, skills, and interests in a gamified environment inspired by Bruno Simon's portfolio.
 
-## Setup
+## 🎮 Experience
 
-Create `.env` file based on `.env.example`
+Explore the world by driving a car!
+- **Drive**: Arrow keys / WASD
+- **Boost**: Shift
+- **Drift**: Space
+- **Interact**: Enter / Click
 
-Download and install [Node.js](https://nodejs.org/en/download/) then run this followed commands:
+## 🚀 Projects
 
-``` bash
-# Install dependencies
-npm install --force
+### Competitions & Challenges
+- **25数证决赛个人赛 & 团体赛** - Data forensics competition finalist.
+- **某某比武** - Technical challenge participation.
+- **UniCTF 2024** - CTF competition experience.
 
-# Serve at localhost:1234
-npm run dev
+### Technical Research
+- **Unity IL2CPP 逆向** - Reverse engineering study.
+- **TLS 回调与 SMC 分析** - Advanced executable analysis.
+- **PE头补全问题** - PE header reconstruction techniques.
+- **DLP离散对数问题** - Cryptography research.
 
-# Build for production in the dist/ directory
-npm run build
-```
+## 🧪 Lab & Interests
 
-## Game loop
+A collection of things that inspire me:
+- **Person of Interest** - AI & surveillance sci-fi series.
+- **Middle Earth** - The legendary fantasy world.
+- **Yes Minister / Yes Prime Minister** - Classic political satire.
+- **Musicals** - The art of musical theatre.
+- **L'amica geniale** - My Brilliant Friend.
 
-#### 0
+## 🛠️ Tech Stack
 
-- Time
-- Inputs
+- **Three.js** - 3D rendering engine.
+- **Cannon.js** - Physics engine.
+- **Vite** - Build tool.
+- **React/Vue** (if applicable, based on codebase analysis).
 
-#### 1
+## 📦 Setup & Run
 
-- Player:pre-physics (Inputs)
+1.  **Install Dependencies**
+    ```bash
+    npm install
+    ```
 
-#### 2
+2.  **Run Development Server**
+    ```bash
+    npm run dev
+    ```
 
-- PhysicalVehicle:pre-physics (Player:pre-physics)
+3.  **Build for Production**
+    ```bash
+    npm run build
+    ```
 
-#### 3
+## 📄 License
 
-- Physics
+This project is based on [Bruno Simon's Portfolio](https://github.com/brunosimon/folio-2019).
+Content and modifications © 2025 Hazel.
 
-#### 4
-
-- PhysicsWireframe (Physics)
-- Objects (Physics)
-
-#### 5
-
-- PhysicalVehicle:post-physics (Player:pre-physics)
-
-#### 6
-
-- Player:post-physics (Physics, PhysicalVehicle:post-physics)
-
-#### 7
-
-- View (Inputs, Player:post-physics)
-
-#### 8
-
-- Intro
-- DayCycles
-- YearCycles
-- Weather (DayCycles, YearCycles)
-- Zones (Player:post-physics)
-- VisualVehicle (PhysicalVehicle:post-physics, Inputs, Player:post-physics, View)
-
-#### 9
-
-- Wind (Weather)
-- Lighting (DayCycles, View)
-- Tornado (DayCycles, PhysicalVehicle)
-- InteractivePoints (Player:post-physics)
-- Tracks (VisualVehicle)
-
-#### 10
-
-- Area++ (View, PhysicalVehicle:post-physics, Player:post-physics, Wind)
-- Foliage (VisualVehicle, View)
-- Fog (View)
-- Reveal (DayCycles)
-- Terrain (Tracks)
-- Trails (PhysicalVehicle)
-- Floor (View)
-- Grass (View, Wind)
-- Leaves (View, PhysicalVehicle)
-- Lightnings (View, Weather)
-- RainLines (View, Weather, Reveal)
-- Snow (View, Weather, Reveal, Tracks)
-- VisualTornado (Tornado)
-- WaterSurface (Weather, View)
-- Benches (Objects)
-- Bricks (Objects)
-- ExplosiveCrates (Objects)
-- Fences (Objects)
-- Lanterns (Objects)
-- Whispers (Player)
-
-#### 13
-
-- InstancedGroup (Objects, [SpecificObjects])
-
-#### 14
-
-- Audio (View, Objects)
-- Notifications
-- Title (PhysicalVehicle:post-physics)
-
-#### 998
-
-- Rendering
-
-#### 999
-
-- Monitoring
-
-## Blender
-
-### Export
-
-- Mute the palette texture node (loaded and set in Three.js `Material` directly)
-- Use corresponding export presets
-- Don't use compression (will be done later)
-
-### Compress
-
-Run `npm run compress`
-
-Will do the following
-
-#### GLB
-
-- Traverses the `static/` folder looking for glb files (ignoring already compressed files)
-- Compresses embeded texture with `etc1s --quality 255` (lossy, GPU friendly)
-- Generates new files to preserve originals
-
-#### Texture files
-
-- Traverses the `static/` folder looking for `png|jpg` files (ignoring non-model related folders)
-- Compresses with default preset to `--encode etc1s --qlevel 255` (lossy, GPU friendly) or specific preset according to path
-- Generates new files to preserve originals
-
-#### UI files
-
-- Traverses the `static/ui.` folder looking for `png|jpg` files
-- Compresses to WebP
-
-#### Resources
-
-- https://gltf-transform.dev/cli
-- https://github.com/KhronosGroup/KTX-Software?tab=readme-ov-file
-- https://github.khronos.org/KTX-Software/ktxtools/toktx.html
+---
+*Created with ❤️ by Hazel*
