@@ -1,4 +1,5 @@
 # Hazel's Portfolio
+站在巨人肩膀上的小博客
 
 Welcome to my 3D interactive portfolio! This project showcases my work, skills, and interests in a gamified environment inspired by Bruno Simon's portfolio.
 
